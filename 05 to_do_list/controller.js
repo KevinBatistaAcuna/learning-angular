@@ -17,5 +17,4 @@ angular.module("ToDoList", ["LocalStorageModule"])
 	$scope.cleanActv = function(){
 		$scope.todo = [];
 	}
-
 });
