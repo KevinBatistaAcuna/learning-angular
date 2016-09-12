@@ -21,7 +21,7 @@ angular.module("MyFirstApp", [])
 					$scope.newPost = {};
 				})
 				.error(function(){
-
+					console.log("error");
 				})
 			}
 	});

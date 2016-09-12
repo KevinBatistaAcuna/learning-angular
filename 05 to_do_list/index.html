@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ToDoList">
+<head>
+	<meta charset="UTF-8">
+	<title>My first page with AngularJs</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script src="angular-local-storage.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller="ToDoController">
+	<ul>
+		<li ng-repeat="activity in todo">
+			{{activity.description}} -
+			{{activity.date | date:short}}
+		</li>
+	</ul>
+
+	<form ng-submit="addActv()">
+		<input type="text" placeholder="Activity" ng-model="newActv.description">
+		<input type="datetime-local" ng-model="newActv.date">
+		<input type="submit" value="Save activity">
+	</form>
+
+	<button ng-click="cleanActv()">Clean list</button>
+	
+</body>
+</html>
