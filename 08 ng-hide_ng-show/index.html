@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+	<meta charset="UTF-8">
+	<title>My first page with AngularJs</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="controller.js"></script>
+	<style>
+		.animated{
+			opacity: 1;
+			overflow: hidden;
+			max-height: auto;
+			transition: all 2s;
+		}
+		.animated.ng-hide{
+			opacity: 0;
+			max-height: 0px !important;
+			display: block !important;
+		}
+	</style>
+</head>
+<body ng-controller="FirstController">
+	<div ng-show="loading">Loading...</div>
+	<div ng-hide="loading || posts.length>0">We can't find any post</div>
+	<ul ng-show="posts.length > 0" class="animated">
+		<li ng-repeat="post in posts">
+			<h2>{{post.title}}</h2>
+			<p>{{post.body}}</p>
+		</li>
+	</ul>
+
+<!-- ng-hide add the class called "ng-hide" when returns true
+ng-show add the class called "ng-hide" when return false -->
+	
+</body>
+</html>
