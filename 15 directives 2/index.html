@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-src and ng-cloak</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+	.circle{
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+	.no-list li{
+		list-style: none;
+	}
+	body,html{
+		text-align: center;
+		background: #eee;
+		margin: 0px;
+	}
+	</style>
+</head>
+<body ng-controller="AppCtrl">
+	<input type="text" my-autocomplet="repos" placeholder="Search repos">
+
+	<ul class="no-list" ng-cloak>
+		<li ng-repeat="repo in repos" ng-hide="main_repo && main_repo != repo.name">
+			
+			<div class="circle" back-img="{{repo.owner.avatar_url}}"> 
+				<!-- style="background:url({{repo.owner.avatar_url}}) center; background-size: cover" -->
+			</div>
+			<h3 class="inline-block">{{repo.full_name}}</h3>
+		</li>
+	</ul>
+	<a ng-click="main_repo = null">Clean</a>
+</body>
+</html>
