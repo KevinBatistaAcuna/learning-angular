@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Events with AngularJs</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+
+	<style>
+		.hover{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<button ng-mouseover="first=true" ng-mouseout="first=false">
+		Hover me
+	</button><span ng-show="first">Click me</span>
+	<p>{{first}}</p>
+
+	<button ng-click="second=!second">
+		Click me
+	</button><span ng-show="second">Click me</span>
+	<p>{{second}}</p>
+
+	<button ng-click="third=!third" ng-class="{'hover' : third}">
+		Click me
+	</button><span ng-show="third">Click me</span>
+	<p>{{third}}</p>
+</body>
+</html>

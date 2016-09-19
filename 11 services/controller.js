@@ -48,3 +48,6 @@ angular.module("ToDoList", ["LocalStorageModule"])
 		$scope.todo = ToDoService.clean();
 	}
 });
+
+
+//Controller return a function, service is a constructor.
