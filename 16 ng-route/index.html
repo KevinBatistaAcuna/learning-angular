@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-route</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="app.js"></script>
+	<script src="directives.js"></script>
+	<script src="controller.js"></script>
+	<style>
+	.circle{
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+	.no-list li{
+		list-style: none;
+	}
+	body,html{
+		text-align: center;
+		background: #eee;
+		margin: 0px;
+	}
+	</style>
+</head>
+<body>
+	<div ng-view>
+		
+	</div>
+</body>
+</html>
