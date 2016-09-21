@@ -1,4 +1,4 @@
-angular.module("finalApp",["lumx","ngRoute"])
+angular.module("finalApp",["lumx","ngRoute","ngResource"])
 .config(function($routeProvider){
 	$routeProvider
 		.when("/",{
