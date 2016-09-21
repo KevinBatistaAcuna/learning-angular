@@ -5,4 +5,8 @@ angular.module("finalApp",["lumx","ngRoute","ngResource"])
 			controller: "mainController",
 			templateUrl: "templates/home.html"
 		})
+		.when("/post/:id",{
+			controller: "postController",
+			templateUrl:"templates/post.html"
+		})
 });
