@@ -27,7 +27,7 @@ angular.module("finalApp")
 })
 .controller("newPostController", function($scope,PostResource,$location){
 	$scope.post = {};
-	$scope.title = "Crear post";
+	$scope.title = "Add post";
 	$scope.savePost = function(){
 		PostResource.save({data: $scope.post}, function(data){
 			console.log(data);
