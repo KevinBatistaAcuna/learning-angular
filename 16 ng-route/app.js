@@ -10,6 +10,7 @@ angular.module("CustomDirective", ["ngRoute"])
 			controller: "RepoController",
 			templateUrl: "templates/repo.html"
 		});
+		.otherwise("/");
 });
 	
 	
